@@ -8,9 +8,6 @@
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
 
-- create:
-    - ~/Work
-
 - shell:
     -
       command: ./install_homebrew.zsh
