@@ -7,6 +7,9 @@
 - link:
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
+    ~/.config/nvim/lua/user:
+      create: true
+      path: .config/nvim/lua/user
 
 - shell:
     -
