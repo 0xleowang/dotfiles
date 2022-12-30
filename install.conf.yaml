@@ -11,5 +11,9 @@
 - create:
     - ~/Work
 
-# - shell:
-#   - [git submodule update --init --recursive, Installing submodules]
+- shell:
+    -
+      command: ./install_homebrew.zsh
+      stdout: true
+      stderr: true
+

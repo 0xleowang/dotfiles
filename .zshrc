@@ -1,6 +1,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Syntax highlighting for man pages using bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Disable gatekeeper for Homebrew
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
 HYPHEN_INSENSITIVE="true"
 
 # update automatically without asking
@@ -48,7 +54,9 @@ alias mm="micromamba"
 alias vi="nvim"
 alias vim="nvim"
 alias zshconfig="nvim $ZDOTDIR/.zshrc"
-alias ls="ls -lAFh"
+alias ls="command exa -laFh --git --no-user --group-directories-first"
+alias lst="command exa -laFh --git --no-user --tree --level=2 --group-directories-first"
+alias exa="command exa -laFh --git --no-user --group-directories-first"
 
 # Set Variables
 # Change ZSH Options
