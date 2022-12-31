@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 echo "\n<<< Installing Homebrew >>>\n"
 
@@ -10,4 +10,3 @@ else
 fi
 
 brew bundle --verbose
-
