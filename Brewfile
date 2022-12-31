@@ -7,6 +7,7 @@ tap "homebrew/core"
 # Brews (Packages)
 brew "bat"
 brew "exa"
+brew "gh"
 brew "git"
 brew "htop"
 brew "httpie"
@@ -36,3 +37,4 @@ cask "the-unarchiver"
 cask "ticktick"
 cask "visual-studio-code"
 cask "wechat"
+
