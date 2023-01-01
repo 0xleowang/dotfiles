@@ -7,6 +7,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Disable gatekeeper for Homebrew
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
+# Replace cat by bat for nullcmd
+export NULLCMD=bat
+
 HYPHEN_INSENSITIVE="true"
 
 # update automatically without asking
