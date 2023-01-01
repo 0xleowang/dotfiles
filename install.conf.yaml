@@ -13,8 +13,10 @@
       path: .config/nvim/lua/user
 
 - shell:
-    -
-      command: ./install_homebrew.zsh
+    - command: ./install_homebrew.zsh
+      stdout: true
+      stderr: true
+    - command: ./install_zsh.zsh
       stdout: true
       stderr: true
 
