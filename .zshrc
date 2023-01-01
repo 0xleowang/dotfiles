@@ -57,9 +57,9 @@ alias mm="micromamba"
 alias vi="nvim"
 alias vim="nvim"
 alias zshconfig="nvim $ZDOTDIR/.zshrc"
-alias ls="command exa -laFh --git --no-user --group-directories-first"
-alias lst="command exa -laFh --git --no-user --tree --level=2 --group-directories-first"
-alias exa="command exa -laFh --git --no-user --group-directories-first"
+alias ls="command exa -laFh --git --group-directories-first"
+alias lst="command exa -laFh --git --tree --level=2 --group-directories-first"
+alias exa="command exa -laFh --git --group-directories-first"
 
 # Set Variables
 # Change ZSH Options
