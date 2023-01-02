@@ -13,6 +13,10 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 # Replace cat by bat for nullcmd
 export NULLCMD=bat
 
+# Set directories for n (the Node version manager)
+export N_PREFIX="$HOME/.n"
+export PREFIX="$N_PREFIX"
+
 ##############################################################################
 # Oh-my-zsh
 ##############################################################################
