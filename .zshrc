@@ -18,7 +18,12 @@ export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
 
 # PATH
-export PATH="$N_PREFIX/bin:$PATH"
+# $path is array and $PATH is a scalar (string)
+typeset -U path
+path=(
+    "$N_PREFIX/bin"
+    $path
+)
 
 ##############################################################################
 # Oh-my-zsh
