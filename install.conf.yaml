@@ -8,6 +8,7 @@
     ~/.zshrc: .zshrc
     ~/.zshenv: .zshenv
     ~/.gitconfig: .gitconfig
+    ~/.mambarc: .mambarc
     ~/.config/nvim/lua/user:
       create: true
       path: .config/nvim/lua/user
