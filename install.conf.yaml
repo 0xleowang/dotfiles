@@ -19,4 +19,7 @@
     - command: ./install_zsh.zsh
       stdout: true
       stderr: true
+    - command: ./install_node.zsh
+      stdout: true
+      stderr: true
 
