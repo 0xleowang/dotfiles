@@ -75,4 +75,5 @@ alias zshconfig="nvim $ZDOTDIR/.zshrc"
 alias ls="command exa -laFh --git --group-directories-first"
 alias lst="command exa -laFh --git --tree --level=2 --group-directories-first"
 alias exa="command exa -laFh --git --group-directories-first"
-
+alias trail="<<<'${(F)path}'"
+alias rm=trash
