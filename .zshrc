@@ -65,10 +65,3 @@ alias exa="command exa -laFh --git --group-directories-first"
 # Change ZSH Options
 # Customizee Prompt(s)
 # Add Locations to $PATH Variable
-# Write Handy Functions
-function mkcd() {
-    mkdir -p "$@" && cd "$_";
-}
-# Use ZSH Plugins
-# ...and Other Surprises
-
