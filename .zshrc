@@ -17,6 +17,9 @@ export NULLCMD=bat
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
 
+# PATH
+export PATH="$PATH:$N_PREFIX/bin"
+
 ##############################################################################
 # Oh-my-zsh
 ##############################################################################
