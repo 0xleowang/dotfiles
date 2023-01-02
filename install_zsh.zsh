@@ -8,10 +8,14 @@ echo "\n<<< Installing ZSH >>>\n"
 if ! grep -Fxq /usr/local/bin/zsh /etc/shells; then
   echo "Enter superuser password to edit /etc/shells"
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells >/dev/null
+else
+  echo "/usr/local/bin/zsh already exists in /etc/shells"
 fi
 
 if [ $SHELL = "/bin/zsh" ]; then
   echo "Enter user password to change login shell"
   chsh -s '/usr/local/bin/zsh'
+else
+  echo "$SHELL has already been set to /usr/local/bin/zsh"
 fi 
 
