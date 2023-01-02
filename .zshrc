@@ -18,7 +18,7 @@ export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
 
 # PATH
-export PATH="$PATH:$N_PREFIX/bin"
+export PATH="$N_PREFIX/bin:$PATH"
 
 ##############################################################################
 # Oh-my-zsh
