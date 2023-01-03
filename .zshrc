@@ -1,8 +1,6 @@
 ##############################################################################
 # Variables
 ##############################################################################
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # Syntax highlighting for man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -25,31 +23,8 @@ path=(
     $path
 )
 
-##############################################################################
-# Oh-my-zsh
-##############################################################################
-HYPHEN_INSENSITIVE="true"
-
-# update automatically without asking
-zstyle ':omz:update' mode auto
-zstyle ':omz:update' frequency 30 # (in days)
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# plugins
-plugins=(
-    zsh-autosuggestions
-    z
-)
-
-source $ZSH/oh-my-zsh.sh
-
 # activate starship
 eval "$(starship init zsh)"
-
-# auto-suggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ###############################################################################
 # mamba initialize 
