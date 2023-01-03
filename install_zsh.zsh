@@ -17,5 +17,14 @@ if [ $SHELL = "/bin/zsh" ]; then
   chsh -s '/usr/local/bin/zsh'
 else
   echo "$SHELL has already been set to /usr/local/bin/zsh"
-fi 
+fi
+
+# Install Zap as the Zsh plugin manager
+if exits zap; then
+  echo "Zap has been installed."
+else
+  echo "Installing Zap ..."
+  git clone https://github.com/zap-zsh/zap.git "$HOME/.local/share/zap" > /dev/null 2>&1
+  mkdir -p "$HOME/.local/share/zap/plugins"
+fi
 
