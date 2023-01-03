@@ -8,7 +8,7 @@ echo "\n<<< Installing Node >>>\n"
 if exists node; then
   echo "Node $(node --version) & NPV $(npm --version) already installed"
 else
-  echo "Installing Node & NPM with n..."
+  echo "Installing Node & NPM with n ..."
   n latest
 fi
 
