@@ -10,6 +10,7 @@
     ~/.gitconfig: .gitconfig
     ~/.config/starship.toml: .config/starship.toml
     ~/.mambarc: .mambarc
+    ~/.hushlogin: .hushlogin
     ~/.config/nvim/lua/user:
       create: true
       path: .config/nvim/lua/user
