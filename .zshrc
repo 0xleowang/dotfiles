@@ -30,6 +30,21 @@ path=(
 eval "$(starship init zsh)"
 
 ###############################################################################
+# Manage Zsh Plugins by Zap
+###############################################################################
+# Plugins
+plug "zsh-users/zsh-autosuggestions" 
+plug "zsh-users/zsh-syntax-highlighting"
+plug "agkozak/zsh-z"
+plug "jeffreytse/zsh-vi-mode"
+
+# Completions
+plug "zsh-users/zsh-completions"
+
+# Enable menu selection
+zstyle ':completion:*' menu yes select
+
+###############################################################################
 # mamba initialize 
 ###############################################################################
 # !! Contents within this block are managed by 'mamba init' !!
