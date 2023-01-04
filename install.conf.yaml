@@ -16,16 +16,16 @@
       path: .config/nvim/lua/user
 
 - shell:
-    - command: ./install_homebrew.zsh
+    - command: ./install/.homebrew
       stdout: true
       stderr: true
-    - command: ./install_zsh.zsh
+    - command: ./install/.zsh
       stdout: true
       stderr: true
-    - command: ./install_node.zsh
+    - command: ./install/.node
       stdout: true
       stderr: true
-    - command: ./setup_macos.zsh
+    - command: ./install/.macos
       stdout: true
       stderr: true
 
