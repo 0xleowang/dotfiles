@@ -30,6 +30,8 @@ brew "httpie"
 brew "k9s"
 # Mac App Store command-line interface
 brew "mas"
+# Node version management
+brew "n"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Search tool like grep and The Silver Searcher
