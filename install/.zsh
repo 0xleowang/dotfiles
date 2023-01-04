@@ -20,7 +20,7 @@ else
 fi
 
 # Install Zap as the Zsh plugin manager
-if exits zap; then
+if exists zap; then
   echo "Zap has been installed."
 else
   echo "Installing Zap ..."
