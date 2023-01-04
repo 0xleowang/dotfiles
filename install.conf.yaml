@@ -10,9 +10,9 @@
     ~/.gitconfig: .gitconfig
     ~/.mambarc: .mambarc
     ~/.hushlogin: .hushlogin
-    ~/.zsh_aliases/.default:
+    ~/.aliases/.default:
       create: true
-      path: .zsh_aliases/.default
+      path: .aliases/.default
     ~/.config/nvim/lua/user:
       create: true
       path: .config/nvim/lua/user
