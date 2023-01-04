@@ -1,0 +1,125 @@
+#!/bin/zsh
+
+# Many code are shamelessly copid from https://mths.be/macos
+# Useful site for configs: https://macos-defaults.com/
+
+echo "\n<<< Setting up MacOS Preferences >>>\n"
+
+# Ask for the superuser password upfront
+echo "Please enter the superuser password for MacOS Preferences changes"
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has completed
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###############################################################################
+# Dock
+###############################################################################
+# Dock Position
+defaults write com.apple.dock "orientation" -string "bottom"
+
+# Autohide the Dock when the mouse is out
+defaults write com.apple.dock "autohide" -bool "true"
+
+# Remove the Dock autohide animation
+defaults write com.apple.dock "autohide-time-modifier" -float "0"
+
+# Remove the autohide delay, the Dock appears instantly
+defaults write com.apple.dock "autohide-delay" -float "0"
+
+# Do not display recent apps in the Dock
+defaults write com.apple.dock "show-recents" -bool "false"
+
+# Set minimize animation effect to scale
+defaults write com.apple.dock "mineffect" -string "scale"
+
+###############################################################################
+# Keyboard, Mouse & Trackpad
+###############################################################################
+# Enabling full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Disabling press-and-hold for special keys
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Setting initial key repeat delay
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Setting key repeat interval
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Setting trackpad speed
+defaults write NSGlobalDomain com.apple.trackpad.scaling 2
+
+# Setting mouse speed
+defaults write NSGlobalDomain com.apple.mouse.scaling 2
+
+###############################################################################
+# Finder
+###############################################################################
+# Show path bar
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+
+# Set default view style to list view
+defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+
+# Keep folders on top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+
+# Set default search scope to be the current folder
+defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
+
+# Automatically empty bin after 30 days
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
+
+# Disable changing file extension warning
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+
+###############################################################################
+# Desktop
+###############################################################################
+# Keep folders on top
+defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true"
+
+# Hide external disks
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false"
+
+# Hide removable media
+defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false"
+
+# Show connected servers
+defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
+
+###############################################################################
+# Menu Bar
+###############################################################################
+# The time separator flashes every second
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "true"
+
+# Set menubar digital clock format
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+
+###############################################################################
+# Other System Preferences
+###############################################################################
+# Disable auto reorder for Spaces 
+defaults write com.apple.dock "mru-spaces" -bool "false"
+
+# When a new disk is connected, system does not prompt to ask if you want to use it as a backup volume.
+defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true"
+
+###############################################################################
+# Restart all related apps
+###############################################################################
+echo "Restarting Dock"
+killall Dock
+echo "Restarting Finder"
+killall Finder
+echo "Restarting SystemUIServer"
+killall SystemUIServer
+
+echo "\nPlease restart the system to activate MacOS Preferences changes\n"
+

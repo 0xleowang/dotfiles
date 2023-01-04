@@ -8,6 +8,9 @@
     ~/.zshrc: .zshrc
     ~/.zshenv: .zshenv
     ~/.gitconfig: .gitconfig
+    ~/.config/starship.toml: .config/starship.toml
+    ~/.mambarc: .mambarc
+    ~/.hushlogin: .hushlogin
     ~/.config/nvim/lua/user:
       create: true
       path: .config/nvim/lua/user
@@ -20,6 +23,9 @@
       stdout: true
       stderr: true
     - command: ./install_node.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_macos.zsh
       stdout: true
       stderr: true
 
