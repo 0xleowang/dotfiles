@@ -1,0 +1,25 @@
+###############################################################################
+# General
+###############################################################################
+
+# zsh
+alias zshconfig="nvim $ZDOTDIR/.zshrc"
+
+# show path
+alias trail="<<<'${(F)path}'"
+
+# exa
+alias ls="command exa -laFh --git --group-directories-first"
+alias lst="command exa -laFh --git --tree --level=2 --group-directories-first"
+alias exa="command exa -laFh --git --group-directories-first"
+
+# trash-cli
+alias rm=trash
+
+# neovim
+alias vi="nvim"
+alias vim="nvim"
+
+# mamba
+alias mm="micromamba"
+

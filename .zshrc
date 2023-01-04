@@ -28,6 +28,11 @@ path=(
 
 # activate starship
 eval "$(starship init zsh)"
+###############################################################################
+# Aliases
+###############################################################################
+for file in ~/.zsh_aliases/*(D);
+    source $file
 
 ###############################################################################
 # Manage Zsh Plugins by Zap
@@ -63,15 +68,3 @@ fi
 unset __mamba_setup
 ###############################################################################
 
-###############################################################################
-# Alias
-###############################################################################
-alias mm="micromamba"
-alias vi="nvim"
-alias vim="nvim"
-alias zshconfig="nvim $ZDOTDIR/.zshrc"
-alias ls="command exa -laFh --git --group-directories-first"
-alias lst="command exa -laFh --git --tree --level=2 --group-directories-first"
-alias exa="command exa -laFh --git --group-directories-first"
-alias trail="<<<'${(F)path}'"
-alias rm=trash

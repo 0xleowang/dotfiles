@@ -11,6 +11,9 @@
     ~/.config/starship.toml: .config/starship.toml
     ~/.mambarc: .mambarc
     ~/.hushlogin: .hushlogin
+    ~/.zsh_aliases/.default:
+      create: true
+      path: .zsh_aliases/.default
     ~/.config/nvim/lua/user:
       create: true
       path: .config/nvim/lua/user
