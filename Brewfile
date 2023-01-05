@@ -52,6 +52,8 @@ cask "1password"
 cask "alfred"
 # Menu bar icon organizer
 cask "bartender"
+# Tool to list all active shortcuts of the current application
+cask "cheatsheet"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
 # App to build and share containerized applications and microservices
