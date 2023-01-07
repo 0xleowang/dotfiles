@@ -58,15 +58,15 @@ eval "$(starship init zsh)"
 ###############################################################################
 # !! Contents within this block are managed by 'mamba init' !!
 export MAMBA_EXE="/usr/local/bin/micromamba";
-export MAMBA_ROOT_PREFIX="/Users/elev3n/.micromamba";
+export MAMBA_ROOT_PREFIX="$HOME/.micromamba";
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
 else
-    if [ -f "/Users/elev3n/.micromamba/etc/profile.d/micromamba.sh" ]; then
-        . "/Users/elev3n/.micromamba/etc/profile.d/micromamba.sh"
+    if [ -f "$HOME/.micromamba/etc/profile.d/micromamba.sh" ]; then
+        . "$HOME/.micromamba/etc/profile.d/micromamba.sh"
     else
-        export  PATH="/Users/elev3n/.micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+        export  PATH="$HOME/.micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
     fi
 fi
 unset __mamba_setup
