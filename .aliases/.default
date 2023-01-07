@@ -23,3 +23,8 @@ alias vim="nvim"
 # mamba
 alias mm="micromamba"
 
+# Temporary fix for Karabiner when it doesn't work after going to sleep.
+# TODO: Remove once the issue is fixed:
+# https://github.com/pqrs-org/Karabiner-Elements/issues/3078
+# .zshrc file
+alias rk="sudo pkill Karabiner-DriverKit-VirtualHIDDeviceClient"
