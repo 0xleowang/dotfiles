@@ -36,6 +36,8 @@ brew "neovim"
 brew "ripgrep"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Terminal multiplexer
+brew "tmux"
 # UNIX shell (command interpreter)
 brew "zsh"
 # A simple terminal UI for git commands, written in Go
