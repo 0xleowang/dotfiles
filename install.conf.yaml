@@ -7,6 +7,7 @@
 - link:
     ~/.zshrc: .zshrc
     ~/.zshenv: .zshenv
+    ~/.p10k.zsh: .p10k.zsh
     ~/.gitconfig: .gitconfig
     ~/.hushlogin: .hushlogin
     ~/.aliases/.default:
@@ -15,9 +16,6 @@
     ~/.config/nvim/lua/user:
       create: true
       path: .config/nvim/lua/user
-    ~/.config/starship.toml:
-      create: true
-      path: .config/starship.toml
 
 - shell:
     - command: ./install/.homebrew

@@ -36,8 +36,6 @@ brew "n"
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Cross-shell prompt for astronauts
-brew "starship"
 # UNIX shell (command interpreter)
 brew "zsh"
 # A simple terminal UI for git commands, written in Go
