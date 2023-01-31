@@ -72,8 +72,8 @@ cask "istat-menus"
 cask "iterm2"
 # File archiver
 cask "keka"
-# Tiny version of the Mamba cross-platform package manager
-cask "micromamba"
+# Minimal installer for conda
+cask "miniconda"
 # Utility to move and zoom windows—on one display
 cask "moom"
 # PDF reader, editor and annotator

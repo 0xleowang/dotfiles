@@ -54,21 +54,19 @@ zstyle ':completion:*' menu yes select
 eval "$(starship init zsh)"
 
 ###############################################################################
-# mamba initialize 
+# conda initialize 
 ###############################################################################
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE="/usr/local/bin/micromamba";
-export MAMBA_ROOT_PREFIX="$HOME/.micromamba";
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "$HOME/.micromamba/etc/profile.d/micromamba.sh" ]; then
-        . "$HOME/.micromamba/etc/profile.d/micromamba.sh"
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export  PATH="$HOME/.micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
-unset __mamba_setup
+unset __conda_setup
 ###############################################################################
 

@@ -8,7 +8,6 @@
     ~/.zshrc: .zshrc
     ~/.zshenv: .zshenv
     ~/.gitconfig: .gitconfig
-    ~/.mambarc: .mambarc
     ~/.hushlogin: .hushlogin
     ~/.aliases/.default:
       create: true
