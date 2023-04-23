@@ -30,6 +30,7 @@ export PREFIX="$N_PREFIX"
 typeset -U path
 path=(
     "$N_PREFIX/bin"
+    ".bin"
     $path
 )
 

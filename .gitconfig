@@ -6,3 +6,5 @@
 [user]
 	name = Leo Wang
 	email = 5508123+0xleowang@users.noreply.github.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
