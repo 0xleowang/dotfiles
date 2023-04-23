@@ -14,6 +14,8 @@ tap "jesseduffield/lazygit"
 brew "bat"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Modern replacement for 'ls'
 brew "exa"
 # Disk usage analyzer with console interface written in Go
@@ -54,8 +56,6 @@ cask "bartender"
 cask "cheatsheet"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
-# App to build and share containerized applications and microservices
-cask "docker"
 # Web browser
 cask "firefox"
 # Developer targeted fonts with a high number of glyphs
@@ -74,6 +74,8 @@ cask "keka"
 cask "miniconda"
 # Utility to move and zoom windows—on one display
 cask "moom"
+# Replacement for Docker Desktop
+cask "orbstack"
 # PDF reader, editor and annotator
 cask "pdf-expert"
 # Music streaming service
