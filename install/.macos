@@ -19,7 +19,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 defaults write com.apple.dock "orientation" -string "bottom"
 
 # Autohide the Dock when the mouse is out
-defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "autohide" -bool "false"
 
 # Remove the Dock autohide animation
 defaults write com.apple.dock "autohide-time-modifier" -float "0"
@@ -105,7 +105,7 @@ defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm
 ###############################################################################
 # Other System Preferences
 ###############################################################################
-# Disable auto reorder for Spaces 
+# Disable auto reorder for Spaces
 defaults write com.apple.dock "mru-spaces" -bool "false"
 
 # When a new disk is connected, system does not prompt to ask if you want to use it as a backup volume.
