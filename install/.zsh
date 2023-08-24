@@ -32,6 +32,6 @@ if exists zap; then
   echo "Zap has been installed."
 else
   echo "Installing Zap ..."
-  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --keep --branch release-v1
 fi
 
