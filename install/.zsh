@@ -5,18 +5,26 @@ echo "\n<<< Installing ZSH >>>\n"
 # Installation was carried in the Brewfile
 # Changing the default shell to the ZSH installed by Homebrew
 
-if ! grep -Fxq /usr/local/bin/zsh /etc/shells; then
-  echo "Enter superuser password to edit /etc/shells"
-  echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells >/dev/null
+if [[ $(uname -m) == "arm64" ]]; then
+  # Apple Silicon
+  ZSH_PATH="/opt/homebrew/bin/zsh"
 else
-  echo "/usr/local/bin/zsh already exists in /etc/shells"
+  # Intel
+  ZSH_PATH="/usr/local/bin/zsh"
 fi
 
-if [ $SHELL = "/bin/zsh" ]; then
-  echo "Enter user password to change login shell"
-  chsh -s '/usr/local/bin/zsh'
+if ! grep -Fxq $ZSH_PATH /etc/shells; then
+  echo "Enter superuser password to edit /etc/shells"
+  echo $ZSH_PATH | sudo tee -a /etc/shells >/dev/null
 else
-  echo "$SHELL has already been set to /usr/local/bin/zsh"
+  echo "$ZSH_PATH already exists in /etc/shells"
+fi
+
+if [ $SHELL != $ZSH_PATH ]; then
+  echo "Enter user password to change login shell"
+  chsh -s $ZSH_PATH
+else
+  echo "$SHELL has already been set to $ZSH_PATH"
 fi
 
 # Install Zap as the Zsh plugin manager
