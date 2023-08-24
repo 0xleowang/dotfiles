@@ -13,9 +13,11 @@
     ~/.aliases/.default:
       create: true
       path: .aliases/.default
-    ~/.config/nvim/lua/user:
+    ~/.config/:
       create: true
-      path: .config/nvim/lua/user
+      glob: true
+      path: .config/*
+      relink: true
 
 - shell:
     - command: ./install/.homebrew
