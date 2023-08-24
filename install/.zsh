@@ -32,7 +32,6 @@ if exists zap; then
   echo "Zap has been installed."
 else
   echo "Installing Zap ..."
-  git clone https://github.com/zap-zsh/zap.git "$HOME/.local/share/zap" > /dev/null 2>&1
-  mkdir -p "$HOME/.local/share/zap/plugins"
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 fi
 
