@@ -44,7 +44,7 @@ for file in ~/.aliases/*(D);
 # Manage Zsh Plugins by Zap
 ###############################################################################
 # Plugins
-plug "zsh-users/zsh-autosuggestions" 
+plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "agkozak/zsh-z"
 plug "jeffreytse/zsh-vi-mode"
@@ -59,17 +59,24 @@ plug "romkatv/powerlevel10k"
 zstyle ':completion:*' menu yes select
 
 ###############################################################################
-# conda initialize 
+# conda initialize
 ###############################################################################
+if [[ $(uname -m) == "arm64" ]]; then
+  # Apple Silicon
+  CONDA_PATH="/opt/homebrew/Caskroom/miniconda"
+else
+  # Intel
+  CONDA_PATH="/usr/local/Caskroom/miniconda"
+fi
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$CONDA_PATH/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    if [ -f "$CONDA_PATH/base/etc/profile.d/conda.sh" ]; then
+        . "$CONDA_PATH/base/etc/profile.d/conda.sh"  # commented out by conda initialize
     else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+        export PATH="$CONDA_PATH/base/bin:$PATH"  # commented out by conda initialize
     fi
 fi
 unset __conda_setup
