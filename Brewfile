@@ -30,6 +30,8 @@ brew "htop"
 brew "httpie"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Mac App Store command-line interface
 brew "mas"
 # Node version management
@@ -84,4 +86,19 @@ cask "ticktick"
 cask "visual-studio-code"
 # Free messaging and calling application
 cask "wechat"
-
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
+# Calendar for professionals and teams
+cask "cron"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Tool to reverse the direction of scrolling
+cask "scroll-reverser"
+# Per-app audio controls
+cask "sound-control"
+# Collect, organize, cite, and share research sources
+cask "zotero"
+# Mesh VPN based on Wireguard
+cask "tailscale"
