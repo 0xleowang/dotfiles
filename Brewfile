@@ -48,8 +48,6 @@ brew "jesseduffield/lazygit/lazygit"
 ###############################################################################
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Application launcher and productivity software
-cask "alfred"
 # Menu bar icon organizer
 cask "bartender"
 # Tool to list all active shortcuts of the current application
@@ -72,8 +70,6 @@ cask "iterm2"
 cask "keka"
 # Minimal installer for conda
 cask "miniconda"
-# Utility to move and zoom windows—on one display
-cask "moom"
 # Replacement for Docker Desktop
 cask "orbstack"
 # PDF reader, editor and annotator
